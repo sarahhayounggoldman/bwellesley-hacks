@@ -19,8 +19,7 @@
     <ul>
     <li><button class="nav dropButton" type="button">Add Constellation</button>
         <div id="addConstDropDown" class="dropClickContent">
-            <form id="addConst">
-                <h2>Add Constellation</h2>
+            <!-- <form id="addConst">
                 <p><label for="constText">Description</label></p>
                 <textarea id="constText" name="constText" required></textarea>
                 <p><label>Date Seen
@@ -30,8 +29,60 @@
                 
                 <button id="addConstButton" type="button">add</button>
                 <button id="cancelAddConst" type="button">cancel</button>
+            </form> -->
+
+            <form id="addConst">
+                <p><label>Date Seen
+                    <input id="taskDate" name="taskDate"
+                           type="date">
+                </label></p>
+                <fieldset>
+                   <label for="state">State</label>
+                            <select id="state" name="state"><option value="---">---</option><option value="Andromeda">Andromeda</option><option value="Antlia">Antlia</option><option value="Apus">Apus</option><option value="Aquarius">Aquarius</option><option value="Aquila">Aquila</option><option value="Ara">Ara</option><option value="Aries">Aries</option><option value="Auriga">Auriga</option><option value="Bootes">Bootes</option><option value="Caelum">Caelum</option><option value="Camelopardalis">Camelopardalis</option><option value="Cancer">Cancer</option><option value="Canes Venatici">Canes Venatici</option><option value="Canis Major">Canis Major</option><option value="Canis Minor">Canis Minor</option><option value="Capricornus">Capricornus</option><option value="Carina">Carina</option><option value="Cassiopeia">Cassiopeia</option><option value="Centaurus">Centaurus</option><option value="Cepheus">Cepheus</option><option value="Cetus">Cetus</option><option value="Chamaeleon">Chamaeleon</option><option value="Circinus">Circinus</option><option value="Columba">Columba</option><option value="Coma Berenices">Coma Berenices</option><option value="Corona Australis">Corona Australis</option><option value="Corona Borealis">Corona Borealis</option><option value="Corvus">Corvus</option><option value="Crater">Crater</option><option value="Crux">Crux</option><option value="Cygnus">Cygnus</option><option value="Delphinus">Delphinus</option><option value="Dorado">Dorado</option><option value="Draco">Draco</option><option value="Equuleus">Equuleus</option><option value="Eridanus">Eridanus</option><option value="Fornax">Fornax</option><option value="Gemini">Gemini</option><option value="Grus">Grus</option><option value="Hercules">Hercules</option><option value="Horologium">Horologium</option><option value="Hydra">Hydra</option><option value="Hydrus">Hydrus</option><option value="Indus">Indus</option><option value="Lacerta">Lacerta</option><option value="Leo">Leo</option><option value="Leo Minor">Leo Minor</option><option value="Lepus">Lepus</option><option value="Libra">Libra</option><option value="Lupus">Lupus</option><option value="Lynx">Lynx</option><option value="Lyra">Lyra</option><option value="Mensa">Mensa</option><option value="Microscopium">Microscopium</option><option value="Wyoming">Wyoming</option>
+                <option value="Monoceros">Monoceros</option>
+                <option value="Musca">Musca</option>
+                <option value="Norma">Norma</option>
+                <option value="Octans">Octans</option>
+                <option value="Ophiuchus">Ophiuchus</option>
+                <option value="Orion">Orion</option>
+                <option value="Pavo">Pavo</option>
+                <option value="Pegasus">Pegasus</option>
+                <option value="Perseus">Perseus</option>
+                <option value="Phoenix">Phoenix</option>
+                <option value="Pictor">Pictor</option>
+                <option value="Pisces">Pisces</option>
+                <option value="Piscis Austrinus">Piscis Austrinus</option>
+                <option value="Puppis">Puppis</option>
+                <option value="Pyxis">Pyxis</option>
+                <option value="Reticulum">Reticulum</option>
+                <option value="Sagitta">Sagitta</option>
+                <option value="Sagittarius">Sagittarius</option>
+                <option value="Scorpius">Scorpius</option>
+                <option value="Sculptor">Sculptor</option>
+                <option value="Scutum">Scutum</option>
+                <option value="Serpens">Serpens</option>
+                <option value="Sextans">Sextans</option>
+                <option value="Taurus">Taurus</option>
+                <option value="Telescopium">Telescopium</option>
+                <option value="Triangulum">Triangulum</option>
+                <option value="Triangulum Australe">Triangulum Australe</option>
+                <option value="Tucana">Tucana</option>
+                <option value="Ursa Major">Ursa Major</option>
+                <option value="Ursa Minor">Ursa Minor</option>
+                <option value="Vela">Vela</option>
+                <option value="Virgo">Virgo</option>
+                <option value="Volans">Volans</option>
+                <option value="Vulpecula">Vulpecula</option>
                 
-            </form>
+                </select>
+                   </fieldset>
+
+                   <button id="addConstButton" type="button">add</button>
+                   <button id="cancelAddConst" type="button">cancel</button>
+
+                </form>
+                
+                
         </div>
     </li>
 
@@ -55,6 +106,9 @@
 <!-- END NAV -->
 
 </div>
+
+
+<ul id="constellations"></ul>
 
 <!-- JavaScript at the bottom -->
 

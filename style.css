@@ -97,6 +97,10 @@ ul {
     text-align: center;
 }
 
+fieldset {
+    text-align: center;
+}
+
 #constellations {
     display: flex;
     flex-wrap: wrap;
@@ -104,8 +108,12 @@ ul {
 
 .boxed-elts{
     padding: 10px;
-    margin: 5px;
-    width: 100px;
+    margin: 10px;
+    width: 110px;
     /* background-color: #8facc0; */
     background-color: rgba(143, 172, 192, 0.75);
+    border-radius: 10px;
+    font-family: 'Helvetica-Bold', 'Helvetica', sans-serif;
+    font-weight: bold;
+    text-align: center;
 }

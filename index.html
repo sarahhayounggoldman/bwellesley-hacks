@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,20 +10,57 @@
 </head>
 <body>
 
+<img id="title" src="stardex_title.png"> 
 <div>
 
-    <!-- <img class="center-fit" src="Twinkle Star-0.7s-681px.png"> -->
+<!-- NAV -->
 
+<nav id="center">
+    <ul>
+    <li><button class="nav dropButton" type="button">Add Constellation</button>
+        <div id="addConstDropDown" class="dropClickContent">
+            <form id="addConst">
+                <h2>Add Constellation</h2>
+                <p><label for="constText">Description</label></p>
+                <textarea id="constText" name="constText" required></textarea>
+                <p><label>Date Seen
+                        <input id="taskDate" name="taskDate"
+                               type="date">
+                </label></p>
+                
+                <button id="addConstButton" type="button">add</button>
+                <button id="cancelAddConst" type="button">cancel</button>
+                
+            </form>
+        </div>
+    </li>
 
+    <li><button class="nav dropButton" type="button">Sort</button>
+        <div class="dropContent">
+            <button id="sortIdButton" type="button">by Name</button>
+            <button id="sortDateButton" type="button">by Date Seen</button>
+        </div>
+    </li>
 
+    <li><button class="nav dropButton" type="button">Local</button>
+        <div class="dropContent">
+            <button id="saveLocalButton" type="button">Save</button>
+            <button id="loadLocalButton" type="button">Load</button>
+            <button id="resetLocalButton" type="button">Reset</button>
+        </div>
+    </li>
+    </ul>
+</nav>
+
+<!-- END NAV -->
 
 </div>
 
 <!-- JavaScript at the bottom -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cs.wellesley.edu/~anderson/js/bounds/bounds-plugin.js"></script>
-<script src="https://cs.wellesley.edu/~cs204/assignments/project/examples-sp21.js"></script>
+<script src="main.js"></script>
+<script src="dropdowns.js"></script>
 <script src="main.js"></script>
 
 </body>

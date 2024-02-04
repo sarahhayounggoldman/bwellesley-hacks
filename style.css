@@ -96,3 +96,16 @@ ul {
 #dateseen {
     text-align: center;
 }
+
+#constellations {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boxed-elts{
+    padding: 10px;
+    margin: 5px;
+    width: 100px;
+    /* background-color: #8facc0; */
+    background-color: rgba(143, 172, 192, 0.75);
+}

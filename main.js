@@ -20,85 +20,6 @@ function helperItem (object) {
  }
 
 
-
-
- 
-
-//STARTER CODE ADDING TO DOM
-
-//DELETE LATER (?)
-//gathers the inputs from the form
-
-function addTaskFromForm(evtObj) { 
-        evtObj.preventDefault();
-        var data = {};
-        var items = $('#addTask').serializeArray()
-        items.forEach(function (item) {
-            data[item.name] = item.value;
-            });
-
-        data['date'] = data['taskDate'];
-        delete data['taskDate'];
-
-        data['text'] = data['taskText'];
-        delete data['taskText'];
-        
-        data['priority'] = data['taskPriority'];
-        delete data['taskPriority'];
-        
-        theTaskList.addNewTask(data);
-
-        $('#addTask')[0].reset();
-        closeAllDropDowns();
-    };
-
-//click handler for adding a task from the form
-$('#addTaskButton').click(addTaskFromForm);
-
-
-//helper fxn handling the cancel task
-function cancelTask(evtObj) {
-    evtObj.preventDefault();
-    closeAllDropDowns();
-}
-
-$('#cancelAddTask').click(cancelTask);
-
-//marking done 
-
-$("#theTasks").one().on("click", ".markDone", function (event) {toggleHelperEvent(event);});
-
-// toggle done helper fxn
-function toggleHelperEvent(event) {
-    var button = event.target; // the <button> being clicked
-    var section = $(button).closest("li"); // the <li> the button is in
-    var id = $(section).data("id"); // the id
-    let x = theTaskList.getTask(id);
-    x.toggleDone();
- }
-
-
-//deleting
-
-$("#theTasks").one().on("click", ".delete", function (event) {deleteHelperEvent(event);});
-
-//delete helper fxn
-
-function deleteHelperEvent(event) {
-    var button = event.target; // the <button> being clicked
-    var section = $(button).closest("li"); // the <li> the button is in
-    var id = $(section).data("id"); // the id
-    theTaskList.deleteTask(id);
- }
-
-//EVT HANDLERS
-$("#sortIdButton").one().on("click", function () {theTaskList.sortById();});
-$("#sortDateButton").one().on("click", function () {theTaskList.sortByDate();});
-$("#sortPriorityButton").one().on("click", function () {theTaskList.sortByPriority();});
-
-$('#saveLocalButton').one().on("click", function() {theTaskList.save()});
-$('#loadLocalButton').one().on("click", function() {theTaskList.load()});
-
 const json_stuff = [{
     "abbr": "And",
     "name": "Andromeda",
@@ -576,49 +497,36 @@ const json_stuff = [{
 
 // })
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     fetch('constellations.json')
-//         .then(response => response.json())
-//         .then(dataList => {
-//             const constellations = document.getElementById("constellations");
 
-//             // Iterate through each dictionary in the list
-//             dataList.forEach(data => {
-//                 // Create HTML elements to display the JSON data for each dictionary
-//                 const nameElement = document.createElement("li");
-//                 nameElement.textContent = "Name: " + data.name;
-
-//                 // Append the elements to the "constellations" div
-//                 constellations.appendChild(nameElement);
-
-//                 constellations.appendChild
-//             });
-//         })
-//         .catch(error => console.error("Error fetching JSON data:", error));
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
     fetch('constellations.json')
         .then(response => response.json())
         .then(dataList => {
             const constellations = document.getElementById("constellations");
-
-            // Iterate through each dictionary in the list
             dataList.forEach(data => {
-                // Create a container (div) for each dictionary's content
+                
                 const container = document.createElement("div");
                 container.classList.add("boxed-elts"); // Add a class for styling
 
-                // Create HTML elements to display the JSON data for each dictionary
                 const nameElement = document.createElement("li");
                 nameElement.textContent = data.name;
 
-                // Append the name element to the container
                 container.appendChild(nameElement);
-
-                // Append the container to the "constellations" div
                 constellations.appendChild(container);
             });
         })
         .catch(error => console.error("Error fetching JSON data:", error));
 });
+
+// function changeColor() {
+//   var change = document.getElementById("state");
+//   var selected = change.options[change.selectedIndex];
+
+//   selected.style.backgroundColor = "#4e7086";
+// }
+
+// document.getElementById(addConst).addEventListener("addConstButton", function(event) {
+//   event.preventDefault(); 
+//   changeColor();
+// });

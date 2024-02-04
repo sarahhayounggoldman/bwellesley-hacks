@@ -22,7 +22,7 @@
             <!-- <form id="addConst">
                 <p><label for="constText">Description</label></p>
                 <textarea id="constText" name="constText" required></textarea>
-                <p id="dateseen"><label>Date Seen
+                <p><label>Date Seen
                         <input id="taskDate" name="taskDate"
                                type="date">
                 </label></p>
@@ -32,12 +32,12 @@
             </form> -->
 
             <form id="addConst">
-                <p><label>Date Seen
+                <p id="dateseen"><label>Date Seen
                     <input id="taskDate" name="taskDate"
                            type="date">
                 </label></p>
                 <fieldset>
-                   <label for="state">State</label>
+                   <label for="state">Constellation Name</label>
                             <select id="state" name="state"><option value="---">---</option><option value="Andromeda">Andromeda</option><option value="Antlia">Antlia</option><option value="Apus">Apus</option><option value="Aquarius">Aquarius</option><option value="Aquila">Aquila</option><option value="Ara">Ara</option><option value="Aries">Aries</option><option value="Auriga">Auriga</option><option value="Bootes">Bootes</option><option value="Caelum">Caelum</option><option value="Camelopardalis">Camelopardalis</option><option value="Cancer">Cancer</option><option value="Canes Venatici">Canes Venatici</option><option value="Canis Major">Canis Major</option><option value="Canis Minor">Canis Minor</option><option value="Capricornus">Capricornus</option><option value="Carina">Carina</option><option value="Cassiopeia">Cassiopeia</option><option value="Centaurus">Centaurus</option><option value="Cepheus">Cepheus</option><option value="Cetus">Cetus</option><option value="Chamaeleon">Chamaeleon</option><option value="Circinus">Circinus</option><option value="Columba">Columba</option><option value="Coma Berenices">Coma Berenices</option><option value="Corona Australis">Corona Australis</option><option value="Corona Borealis">Corona Borealis</option><option value="Corvus">Corvus</option><option value="Crater">Crater</option><option value="Crux">Crux</option><option value="Cygnus">Cygnus</option><option value="Delphinus">Delphinus</option><option value="Dorado">Dorado</option><option value="Draco">Draco</option><option value="Equuleus">Equuleus</option><option value="Eridanus">Eridanus</option><option value="Fornax">Fornax</option><option value="Gemini">Gemini</option><option value="Grus">Grus</option><option value="Hercules">Hercules</option><option value="Horologium">Horologium</option><option value="Hydra">Hydra</option><option value="Hydrus">Hydrus</option><option value="Indus">Indus</option><option value="Lacerta">Lacerta</option><option value="Leo">Leo</option><option value="Leo Minor">Leo Minor</option><option value="Lepus">Lepus</option><option value="Libra">Libra</option><option value="Lupus">Lupus</option><option value="Lynx">Lynx</option><option value="Lyra">Lyra</option><option value="Mensa">Mensa</option><option value="Microscopium">Microscopium</option><option value="Wyoming">Wyoming</option>
                 <option value="Monoceros">Monoceros</option>
                 <option value="Musca">Musca</option>
@@ -77,7 +77,7 @@
                 </select>
                    </fieldset>
 
-                   <button id="addConstButton" type="button">add</button>
+                   <button id="addConstButton" type="button" onchange="saveVal()">add</button>
                    <button id="cancelAddConst" type="button">cancel</button>
 
                 </form>
@@ -102,6 +102,8 @@
     </li>
     </ul>
 </nav>
+
+
 
 <!-- END NAV -->
 

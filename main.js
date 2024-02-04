@@ -576,18 +576,49 @@ const json_stuff = [{
 
 // })
 
+// document.addEventListener("DOMContentLoaded", function () {
+//     fetch('constellations.json')
+//         .then(response => response.json())
+//         .then(dataList => {
+//             const constellations = document.getElementById("constellations");
+
+//             // Iterate through each dictionary in the list
+//             dataList.forEach(data => {
+//                 // Create HTML elements to display the JSON data for each dictionary
+//                 const nameElement = document.createElement("li");
+//                 nameElement.textContent = "Name: " + data.name;
+
+//                 // Append the elements to the "constellations" div
+//                 constellations.appendChild(nameElement);
+
+//                 constellations.appendChild
+//             });
+//         })
+//         .catch(error => console.error("Error fetching JSON data:", error));
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
     fetch('constellations.json')
         .then(response => response.json())
-        .then(data => {
+        .then(dataList => {
             const constellations = document.getElementById("constellations");
 
-            // Create HTML elements to display the JSON data
-            const nameElement = document.createElement("li");
-            nameElement.textContent = "Name: " + data.name;
+            // Iterate through each dictionary in the list
+            dataList.forEach(data => {
+                // Create a container (div) for each dictionary's content
+                const container = document.createElement("div");
+                container.classList.add("boxed-elts"); // Add a class for styling
 
-            // Append the elements to the "dataDisplay" div
-            constellations.appendChild(nameElement);
+                // Create HTML elements to display the JSON data for each dictionary
+                const nameElement = document.createElement("li");
+                nameElement.textContent = data.name;
+
+                // Append the name element to the container
+                container.appendChild(nameElement);
+
+                // Append the container to the "constellations" div
+                constellations.appendChild(container);
+            });
         })
         .catch(error => console.error("Error fetching JSON data:", error));
 });
